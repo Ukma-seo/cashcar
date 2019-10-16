@@ -1,0 +1,41 @@
+.car__details {
+  .car__details-unlinked {
+    display: flex;
+    justify-content: space-around;
+  }
+  .car__details-linked {
+    position: relative;
+    margin: 100px auto;
+    // width: 90%;
+    .label__input {
+      position: absolute;
+    }
+    #mileage_div {
+      .arrow {
+        @include arrow__mixin(45deg, -20px, -100px);
+      }
+      left: 330px;
+      top: 400px;
+    }
+    #brand_div {
+      .arrow {
+        @include arrow__mixin(-45deg, -20px, 100%);
+      }
+      right: 330px;
+      top: 100px;
+    }
+  }
+  .car__wrapper {
+    display: flex;
+    justify-content: center;
+    .car__details-car {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      button {
+        margin: 100px 0;
+        width: 100%;
+      }
+    }
+  }
+}

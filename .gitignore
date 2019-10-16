@@ -31,7 +31,7 @@ MANIFEST
 *.manifest
 *.spec
 
-/front-end/SEO/node_modules
+/front-end/node_modules
 
 # Installer logs
 pip-log.txt

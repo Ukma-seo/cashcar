@@ -1,0 +1,13 @@
+header {
+  height: 50px;
+  width: 100%;
+  background: #bbc;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+    height: 100%;
+    align-items: center;
+  }
+}
