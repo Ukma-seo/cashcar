@@ -1,0 +1,68 @@
+.car__details .car__details-unlinked {
+  display: flex;
+  justify-content: space-around; }
+
+.car__details .car__details-linked {
+  position: relative;
+  margin: 100px auto; }
+  .car__details .car__details-linked .label__input {
+    position: absolute; }
+  .car__details .car__details-linked #mileage_div {
+    left: 330px;
+    top: 400px; }
+    .car__details .car__details-linked #mileage_div .arrow {
+      width: 100px;
+      border-bottom: 2px solid black;
+      position: absolute;
+      transform: rotate(45deg);
+      top: -20px;
+      left: -100px; }
+  .car__details .car__details-linked #brand_div {
+    right: 330px;
+    top: 100px; }
+    .car__details .car__details-linked #brand_div .arrow {
+      width: 100px;
+      border-bottom: 2px solid black;
+      position: absolute;
+      transform: rotate(-45deg);
+      top: -20px;
+      left: 100%; }
+
+.car__details .car__wrapper {
+  display: flex;
+  justify-content: center; }
+  .car__details .car__wrapper .car__details-car {
+    position: relative;
+    display: flex;
+    flex-direction: column; }
+    .car__details .car__wrapper .car__details-car button {
+      margin: 100px 0;
+      width: 100%; }
+
+header {
+  height: 50px;
+  width: 100%;
+  background: #bbc; }
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center; }
+
+body {
+  font-family: "Arial";
+  background: radial-gradient(transparent, #ccd 90%); }
+
+.label__input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0; }
+
+input[type="text"] {
+  border-radius: 10px;
+  border: 2px solid #777;
+  height: 25px;
+  margin: 20px 0 0 0;
+  padding: 0 10px; }

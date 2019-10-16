@@ -1,0 +1,15 @@
+@mixin label__input__mixin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+@mixin arrow__mixin($angle, $top, $left) {
+  width: 100px;
+  border-bottom: 2px solid black;
+  position: absolute;
+  transform: rotate($angle);
+  top: $top;
+  left: $left;
+}
