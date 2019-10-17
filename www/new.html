@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ45RW" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<head>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -17,79 +13,84 @@
     })(window, document, 'script', 'dataLayer', 'GTM-WVQ45RW');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
+  <link rel="canonical" href="http://cashcar.com.ua/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./css/main.css" />
   <title>Document</title>
-  </head>
+</head>
 
-  <body>
-    <header>
-      <ul>
-        <li><a href="buying_in_web.html">Купiвля в iнтернетi</a></li>
-        <li><a href="used.html">Б/У</a></li>
-        <li><a href="new.html">Новi</a></li>
-        <li><a href="prepare_to_sell.html">Пiдготовка до продажу</a></li>
-        <li><a href="buying_used.html">Купiвля Б/У авто</a></li>
-        <li><a href="price_up_used.html">Пiдвищити цiну свого авто</a></li>
-      </ul>
-    </header>
-    <main>
-      <div class="car__details">
-        <div class="car__details-unlinked">
-          <div class="label__input">
-            <label for="year">Year</label>
-            <input type="text" id="year" />
-          </div>
-          <div class="label__input">
-            <label for="country">Country</label>
-            <input type="text" id="country" />
-          </div>
-          <div class="label__input">
-            <label for="type">Type</label>
-            <input type="text" id="type" />
-          </div>
-          <div class="label__input">
-            <label for="color">Color</label>
-            <input type="text" id="color" />
-          </div>
-          <div class="label__input">
-            <label for="engine_volume">Engine volume</label>
-            <input type="text" id="engine_volume" />
-          </div>
-          <div class="label__input">
-            <label for="fuel_type">Fuel Type</label>
-            <input type="text" id="fuel_type" />
-          </div>
-          <div class="label__input">
-            <label for="transmission">Transmission</label>
-            <input type="text" id="transmission" />
-          </div>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ45RW" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <ul>
+      <li><a href="buying_in_web.html">Купiвля в iнтернетi</a></li>
+      <li><a href="used.html">Б/У</a></li>
+      <li><a href="new.html">Новi</a></li>
+      <li><a href="prepare_to_sell.html">Пiдготовка до продажу</a></li>
+      <li><a href="buying_used.html">Купiвля Б/У авто</a></li>
+      <li><a href="price_up_used.html">Пiдвищити цiну свого авто</a></li>
+    </ul>
+  </header>
+  <main>
+    <div class="car__details">
+      <div class="car__details-unlinked">
+        <div class="label__input">
+          <label for="year">Year</label>
+          <input type="text" id="year" />
         </div>
-        <hr />
+        <div class="label__input">
+          <label for="country">Country</label>
+          <input type="text" id="country" />
+        </div>
+        <div class="label__input">
+          <label for="type">Type</label>
+          <input type="text" id="type" />
+        </div>
+        <div class="label__input">
+          <label for="color">Color</label>
+          <input type="text" id="color" />
+        </div>
+        <div class="label__input">
+          <label for="engine_volume">Engine volume</label>
+          <input type="text" id="engine_volume" />
+        </div>
+        <div class="label__input">
+          <label for="fuel_type">Fuel Type</label>
+          <input type="text" id="fuel_type" />
+        </div>
+        <div class="label__input">
+          <label for="transmission">Transmission</label>
+          <input type="text" id="transmission" />
+        </div>
+      </div>
+      <hr />
 
-        <div class="car__details-linked">
-          <div class="car__wrapper">
-            <div class="car__details-car">
-              <div id="mileage_div" class="label__input">
-                <div class="arrow"></div>
-                <label for="mileage">Mileage</label>
-                <input type="text" id="mileage" />
-              </div>
-              <div id="brand_div" class="label__input">
-                <div class="arrow"></div>
-                <label for="brand">Brand</label>
-                <input type="text" id="brand" />
-              </div>
-              <img src="./src/assets/car.png" alt="car" />
-              <button onclick="send()" type="submit">Search</button>
+      <div class="car__details-linked">
+        <div class="car__wrapper">
+          <div class="car__details-car">
+            <div id="mileage_div" class="label__input">
+              <div class="arrow"></div>
+              <label for="mileage">Mileage</label>
+              <input type="text" id="mileage" />
             </div>
+            <div id="brand_div" class="label__input">
+              <div class="arrow"></div>
+              <label for="brand">Brand</label>
+              <input type="text" id="brand" />
+            </div>
+            <img src="./src/assets/car.png" alt="car" />
+            <button onclick="send()" type="submit">Search</button>
           </div>
         </div>
       </div>
-    </main>
-    <footer></footer>
-    <script src="./scripts/main.js"></script>
-  </body>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="./scripts/main.js"></script>
+</body>
 
 </html>
