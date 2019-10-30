@@ -5,11 +5,16 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch ./src/styles/ -o css"
+    "scss": "node-sass --watch ./src/styles/ -o css",
+    "start": "webpack --watch",
+    "server": "webpack-dev-server --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "webpack": "^3.6.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^2.9.1"
   }
 }

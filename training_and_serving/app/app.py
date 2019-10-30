@@ -1,5 +1,6 @@
 from flask import request, Flask
 import sys
+
 sys.path.insert(0, "../../../")
 
 from cashcar.training_and_serving.app.helpers import *
@@ -7,6 +8,7 @@ from cashcar.training_and_serving.app.helpers import *
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+
 
 @app.route("/app/v1/predict", methods=["GET"])
 def get_prediction():

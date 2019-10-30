@@ -6,6 +6,7 @@ function send() {
   body["brand_name"] = document.getElementById("brand").value;
   body["mileage_value"] = document.getElementById("mileage").value;
   body["color"] = document.getElementById("color").value;
+  body["model"] = "lgbm";
   body["engine_volume"] = document.getElementById("engine_volume").value;
   body["fuel_type"] = document.getElementById("fuel_type").value;
   body["transmission"] = document.getElementById("transmission").value;
@@ -15,11 +16,18 @@ function send() {
     ""
   );
   params = params.slice(0, params.length - 1);
-  var url = "http://localhost:5000/app/v1/predict" + params ? "?" + params : "";
-  console.log(body, params, url);
-  fetch(url)
+  var url = "http://127.0.1:5000/app/v1/predict";
+  if (params.length) {
+    url = url + "?" + params;
+  }
+  // url += params.length ? "?" + params : "";
+  console.log(url);
+  fetch(url, {
+    mode: "no-cors",
+    headers: { "Access-Control-Allow-Origin": "*" }
+  })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => (document.getElementById("response").value = data))
     .catch(err => console.log(err));
 }
 
