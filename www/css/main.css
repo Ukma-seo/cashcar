@@ -4,13 +4,23 @@
 
 .car__details .car__details-linked {
   position: relative;
-  margin: 100px auto; }
+  margin: 20px auto; }
   .car__details .car__details-linked .label__input {
     position: absolute; }
   .car__details .car__details-linked #mileage_div {
     left: 330px;
     top: 400px; }
     .car__details .car__details-linked #mileage_div .arrow {
+      width: 100px;
+      border-bottom: 2px solid black;
+      position: absolute;
+      transform: rotate(45deg);
+      top: -20px;
+      left: -100px; }
+  .car__details .car__details-linked #transmission_div {
+    left: 330px;
+    top: 150px; }
+    .car__details .car__details-linked #transmission_div .arrow {
       width: 100px;
       border-bottom: 2px solid black;
       position: absolute;
@@ -27,6 +37,16 @@
       transform: rotate(-45deg);
       top: -20px;
       left: 100%; }
+  .car__details .car__details-linked #fuel_type_div {
+    right: 330px;
+    top: 450px; }
+    .car__details .car__details-linked #fuel_type_div .arrow {
+      width: 100px;
+      border-bottom: 2px solid black;
+      position: absolute;
+      transform: rotate(-45deg);
+      top: -20px;
+      left: 100%; }
 
 .car__details .car__wrapper {
   display: flex;
@@ -36,7 +56,8 @@
     display: flex;
     flex-direction: column; }
     .car__details .car__wrapper .car__details-car button {
-      margin: 100px 0;
+      margin: 20px 0;
+      padding: 10px;
       width: 100%; }
 
 header {

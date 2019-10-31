@@ -5,8 +5,7 @@
   }
   .car__details-linked {
     position: relative;
-    margin: 100px auto;
-    // width: 90%;
+    margin: 20px auto;
     .label__input {
       position: absolute;
     }
@@ -17,12 +16,26 @@
       left: 330px;
       top: 400px;
     }
+    #transmission_div {
+      .arrow {
+        @include arrow__mixin(45deg, -20px, -100px);
+      }
+      left: 330px;
+      top: 150px;
+    }
     #brand_div {
       .arrow {
         @include arrow__mixin(-45deg, -20px, 100%);
       }
       right: 330px;
       top: 100px;
+    }
+    #fuel_type_div {
+      .arrow {
+        @include arrow__mixin(-45deg, -20px, 100%);
+      }
+      right: 330px;
+      top: 10px;
     }
   }
   .car__wrapper {
@@ -33,7 +46,8 @@
       display: flex;
       flex-direction: column;
       button {
-        margin: 100px 0;
+        margin: 20px 0;
+        padding: 10px;
         width: 100%;
       }
     }

@@ -41,36 +41,30 @@
       <div class="car__details-unlinked">
         <div class="label__input">
           <label for="year">Year</label>
-          <input type="text" id="year" />
+          <select name="year" id="year">
+          </select>
         </div>
         <div class="label__input">
           <label for="country">Country</label>
-          <input type="text" id="country" />
+          <select name="country" id="country"></select>
         </div>
         <div class="label__input">
           <label for="type">Type</label>
-          <input type="text" id="type" />
+          <select name="type" id="type"></select>
         </div>
         <div class="label__input">
           <label for="color">Color</label>
-          <input type="text" id="color" />
+          <select name="" id="color"></select>
         </div>
         <div class="label__input">
           <label for="engine_volume">Engine volume</label>
-          <input type="text" id="engine_volume" />
+          <select name="" id="engine_volume"></select>
         </div>
         <div class="label__input">
           <label for="model">Model</label>
-          <input type="text" id="model" />
+          <select name="" id="model"></select>
         </div>
-        <div class="label__input">
-          <label for="fuel_type">Fuel Type</label>
-          <input type="text" id="fuel_type" />
-        </div>
-        <div class="label__input">
-          <label for="transmission">Transmission</label>
-          <input type="text" id="transmission" />
-        </div>
+
       </div>
       <hr />
 
@@ -80,12 +74,22 @@
             <div id="mileage_div" class="label__input">
               <div class="arrow"></div>
               <label for="mileage">Mileage</label>
-              <input type="text" id="mileage" />
+              <select id="mileage"></select>
+            </div>
+            <div id="fuel_type_div" class="label__input">
+              <div class="arrow"></div>
+              <label for="fuel_type">Fuel Type</label>
+              <select id="fuel_type"></select>
+            </div>
+            <div id="transmission_div" class="label__input">
+              <div class="arrow"></div>
+              <label for="transmission">Transmission</label>
+              <select id="transmission"></select>
             </div>
             <div id="brand_div" class="label__input">
               <div class="arrow"></div>
               <label for="brand">Brand</label>
-              <input type="text" id="brand" />
+              <select id="brand"></select>
             </div>
             <img src="./src/assets/car.png" alt="Car view from top" />
             <button onclick="send()" type="submit">Search</button>

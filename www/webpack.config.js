@@ -12,7 +12,7 @@ module.exports = {
     open: true,
     port: 8080,
     historyApiFallback: {
-      index: "new.html"
+      index: "used.html"
     }
   },
   module: {
