@@ -41,6 +41,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./css/main.css" />
+  <link href="./css/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+  <!--load all styles -->
   <meta name="description" content="" />
   <title>Оцiнити вартiсть моєï автiвки за ïï параметрами</title>
 </head>
@@ -93,32 +95,32 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="constructor">
     <div class="car__details">
       <div class="car__details-unlinked">
         <div class="label__input">
-          <label for="year">Year</label>
+          <label for="year"><i class="fas fa-clock"></i> Year</label>
           <select class="custom-select" name="year" id="year">
           </select>
         </div>
         <div class="label__input">
-          <label for="country">Country</label>
+          <label for="country"><i class="fas fa-map-pin"></i> Country</label>
           <select class="custom-select" name="country" id="country"></select>
         </div>
         <div class="label__input">
-          <label for="type">Type</label>
+          <label for="type"><i class="fas fa-car"></i> Type</label>
           <select class="custom-select" name="type" id="type"></select>
         </div>
         <div class="label__input">
-          <label for="color">Color</label>
+          <label for="color"><i class="fas fa-paint-brush"></i> Color</label>
           <select class="custom-select" name="" id="color"></select>
         </div>
         <div class="label__input">
-          <label for="engine_volume">Engine volume</label>
+          <label for="engine_volume"><i class="fas fa-gas-pump"></i> Engine volume </label>
           <select class="custom-select" name="" id="engine_volume"></select>
         </div>
         <div class="label__input">
-          <label for="model">Model</label>
+          <label for="model"><i class="fas fa-car-side"></i> Model</label>
           <select class="custom-select" name="" id="model"></select>
         </div>
 
@@ -130,22 +132,22 @@
           <div class="car__details-car">
             <div id="mileage_div" class="label__input">
               <div class="arrow"></div>
-              <label for="mileage">Mileage</label>
+              <label for="mileage"><i class="fas fa-car-tachometer-alt"></i> Mileage</label>
               <select class="custom-select" id="mileage"></select>
             </div>
             <div id="fuel_type_div" class="label__input">
               <div class="arrow"></div>
-              <label for="fuel_type">Fuel Type</label>
+              <label for="fuel_type"><i class="fas fa-gas-pump"></i> Fuel Type</label>
               <select class="custom-select" id="fuel_type"></select>
             </div>
             <div id="transmission_div" class="label__input">
               <div class="arrow"></div>
-              <label for="transmission">Transmission</label>
+              <label for="transmission"><i class="fas fa-cog"></i> Transmission</label>
               <select class="custom-select" id="transmission"></select>
             </div>
             <div id="brand_div" class="label__input">
               <div class="arrow"></div>
-              <label for="brand">Brand</label>
+              <label for="brand"><i class="fas fa-car-trademark"></i> Brand</label>
               <select class="custom-select" id="brand"></select>
             </div>
             <img src="./src/assets/car.png" alt="Car view from top" />
@@ -161,9 +163,10 @@
     <hr>
     <h2>Принцип роботи калькулятора</h2>
 
-    Ми обрахуваємо ціну вашого авто абсолютно автоматично. Це означає, що людина ніяким чином не може вплинути на
-    результат формування ціни. Було зібрано та проаналізовано десятки тисяч успішних угод на платформах продажу б/у
-    авто. А кінцеве рішення здійснюється завдяки передовим технологіям штучного інтелекту.
+    Ми обрахуваємо ціну вашого авто абсолютно автоматично.
+    Це означає, що людина ніяким чином не може вплинути на результат формування ціни.
+    Було зібрано та проаналізовано десятки тисяч успішних угод на платформах продажу б/у авто.
+    А кінцеве рішення здійснюється завдяки передовим технологіям штучного інтелекту.
     <hr>
     <h2>Переваги автоматизованого оцінювання</h2>
 
