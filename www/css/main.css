@@ -39,7 +39,7 @@
       left: 100%; }
   .car__details .car__details-linked #fuel_type_div {
     right: 330px;
-    top: 450px; }
+    top: 310px; }
     .car__details .car__details-linked #fuel_type_div .arrow {
       width: 100px;
       border-bottom: 2px solid black;
@@ -64,12 +64,19 @@ header {
   height: 50px;
   width: 100%;
   background: #bbc; }
+  header nav {
+    z-index: 1; }
   header ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     height: 100%;
     align-items: center; }
+
+footer {
+  margin: auto;
+  width: 90%;
+  margin-bottom: 100px; }
 
 body {
   font-family: "Arial";
@@ -87,3 +94,16 @@ input[type="text"] {
   height: 25px;
   margin: 20px 0 0 0;
   padding: 0 10px; }
+
+img {
+  width: 100%; }
+
+li > div > img {
+  width: 300px; }
+
+li > img {
+  width: 300px; }
+
+main {
+  width: 90%;
+  margin: 50px auto; }

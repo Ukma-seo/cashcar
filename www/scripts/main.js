@@ -47,10 +47,12 @@ function send() {
 }
 function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
-  var optionTags = makeTags(optionsArray);
-  optionTags.forEach(tag => {
-    selectTag.innerHTML += tag;
-  });
+  if (selectTag) {
+    var optionTags = makeTags(optionsArray);
+    optionTags.forEach(tag => {
+      selectTag.innerHTML += tag;
+    });
+  }
 }
 
 function makeTags(optionsArray) {

@@ -2,6 +2,7 @@
 @import "mixins";
 @import "car";
 @import "header";
+@import "footer";
 
 body {
   font-family: "Arial";
@@ -17,4 +18,18 @@ input[type="text"] {
   height: 25px;
   margin: 20px 0 0 0;
   padding: 0 10px;
+}
+img {
+  width: 100%;
+}
+
+li > div > img {
+  width: 300px;
+}
+li > img {
+  width: 300px;
+}
+main {
+  width: 90%;
+  margin: 50px auto;
 }

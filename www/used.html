@@ -98,28 +98,28 @@
       <div class="car__details-unlinked">
         <div class="label__input">
           <label for="year">Year</label>
-          <select name="year" id="year">
+          <select class="custom-select" name="year" id="year">
           </select>
         </div>
         <div class="label__input">
           <label for="country">Country</label>
-          <select name="country" id="country"></select>
+          <select class="custom-select" name="country" id="country"></select>
         </div>
         <div class="label__input">
           <label for="type">Type</label>
-          <select name="type" id="type"></select>
+          <select class="custom-select" name="type" id="type"></select>
         </div>
         <div class="label__input">
           <label for="color">Color</label>
-          <select name="" id="color"></select>
+          <select class="custom-select" name="" id="color"></select>
         </div>
         <div class="label__input">
           <label for="engine_volume">Engine volume</label>
-          <select name="" id="engine_volume"></select>
+          <select class="custom-select" name="" id="engine_volume"></select>
         </div>
         <div class="label__input">
           <label for="model">Model</label>
-          <select name="" id="model"></select>
+          <select class="custom-select" name="" id="model"></select>
         </div>
 
       </div>
@@ -131,25 +131,25 @@
             <div id="mileage_div" class="label__input">
               <div class="arrow"></div>
               <label for="mileage">Mileage</label>
-              <select id="mileage"></select>
+              <select class="custom-select" id="mileage"></select>
             </div>
             <div id="fuel_type_div" class="label__input">
               <div class="arrow"></div>
               <label for="fuel_type">Fuel Type</label>
-              <select id="fuel_type"></select>
+              <select class="custom-select" id="fuel_type"></select>
             </div>
             <div id="transmission_div" class="label__input">
               <div class="arrow"></div>
               <label for="transmission">Transmission</label>
-              <select id="transmission"></select>
+              <select class="custom-select" id="transmission"></select>
             </div>
             <div id="brand_div" class="label__input">
               <div class="arrow"></div>
               <label for="brand">Brand</label>
-              <select id="brand"></select>
+              <select class="custom-select" id="brand"></select>
             </div>
             <img src="./src/assets/car.png" alt="Car view from top" />
-            <button onclick="send()" type="submit">Search</button>
+            <button onclick="send()" type="submit" class="btn btn-outline-success">Search</button>
             <h3 id="response"></h3>
           </div>
         </div>
@@ -158,31 +158,31 @@
   </main>
   <footer>
     <h1>Оцінка б/у авто</h1>
-
+    <hr>
     <h2>Принцип роботи калькулятора</h2>
 
     Ми обрахуваємо ціну вашого авто абсолютно автоматично. Це означає, що людина ніяким чином не може вплинути на
     результат формування ціни. Було зібрано та проаналізовано десятки тисяч успішних угод на платформах продажу б/у
     авто. А кінцеве рішення здійснюється завдяки передовим технологіям штучного інтелекту.
-
+    <hr>
     <h2>Переваги автоматизованого оцінювання</h2>
 
     Для отримання оптимальної оцінки зазвичай потрібно аналізувати ринок, шукати схожі авто на різних платформах.
     Використовуючи наш калькулятор, ви отримуєте актуальну оцінку вартості авто, аналізуючи дані багатьох оголошень,
     перевірених експертами. Також вам не потрібно залучати третіх осіб, відповідно витрачати на це час та гроші.
-
+    <hr>
     <h2>Перелік параметрів б/у авто</h2>
 
-    <ol>
-      <li> Модель авто (Megane , Focus , Camry)</li>
-      <li> Пробіг (кількість кілометрів)</li>
-      <li> Бренд авто (Volkswagen, Renault, Mercedes-Benz)</li>
-      <li> Об'єм двигуна (кількість літрів)</li>
-      <li> Тип кузова (Седан, Универсал, Внедорожник)</li>
-      <li> Рік випуску</li>
-      <li> Колір </li>
-      <li> Тип палива (Дизель, Бензин , Газ)</li>
-      <li> Коробка передач (Ручная / Механика, Автомат)</li>
+    <ol class="list-group">
+      <li class="list-group-item"> Модель авто (Megane , Focus , Camry)</li>
+      <li class="list-group-item"> Пробіг (кількість кілометрів)</li>
+      <li class="list-group-item"> Бренд авто (Volkswagen, Renault, Mercedes-Benz)</li>
+      <li class="list-group-item"> Об'єм двигуна (кількість літрів)</li>
+      <li class="list-group-item"> Тип кузова (Седан, Универсал, Внедорожник)</li>
+      <li class="list-group-item"> Рік випуску</li>
+      <li class="list-group-item"> Колір </li>
+      <li class="list-group-item"> Тип палива (Дизель, Бензин , Газ)</li>
+      <li class="list-group-item"> Коробка передач (Ручная / Механика, Автомат)</li>
     </ol>
 
     Дані параметри впорядковані згідно з їх впливом на формування ціни. Від найбільшого до найменшого.
