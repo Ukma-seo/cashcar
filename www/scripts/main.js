@@ -21,28 +21,39 @@ function send() {
   body["color"] = document.getElementById("color").value || "Серый";
   body["with_auction"] = 0;
   body["with_exchange"] = 0;
-  body["model"] = "lgbm";
+  body["model"] = document.getElementById("model").value || "corolla";
   body["engine_volume"] = document.getElementById("engine_volume").value || 2;
   body["fuel_type"] = document.getElementById("fuel_type").value || "Дизель";
   body["transmission"] =
     document.getElementById("transmission").value || "Автомат";
-  var filledParams = Object.keys(body).filter(val => body[val]);
-  var params = filledParams.reduce(
-    (a, b) => (a += b + "=" + body[b] + "&"),
-    ""
-  );
-  params = params.slice(0, params.length - 1);
-  var url = "http://127.0.1:5000/app/v1/predict";
-  if (params.length) {
-    url = url + "?" + params;
+  for (const key in body) {
+    if (!body[key] && body[key] !== 0) {
+      delete body[key];
+    }
   }
-  console.log(url);
+  // var filledParams = Object.keys(body).filter(val => body[val]);
+  // var params = filledParams.reduce(
+  //   (a, b) => (a += b + "=" + body[b] + "&"),
+  //   ""
+  // );
+
+  var features = encodeURI(JSON.stringify(body));
+
+  // params = params.slice(0, params.length - 1);
+  var url = `http://34.90.123.230:8081/app/v1/predict?model=lgbm&features=${features}`;
+  // if (params.length) {
+  //   url = url + "?" + params;
+  // }
+
   fetch(url, {
     mode: "no-cors",
     headers: { "Access-Control-Allow-Origin": "*" }
   })
-    .then(res => res.json())
-    .then(data => (document.getElementById("response").value = data))
+    .then(res =>
+      res.hasOwnProperty("json()")
+        ? (document.getElementById("response").value = res.json())
+        : console.log(res)
+    )
     .catch(err => console.log(err));
 }
 function insertOptions(selectId, optionsArray) {
