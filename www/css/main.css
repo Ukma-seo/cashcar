@@ -80,7 +80,8 @@ footer {
 
 body {
   font-family: "Arial";
-  background: radial-gradient(transparent, #ccd 90%); }
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./AI.jpg"); }
 
 .label__input {
   position: relative;
@@ -97,6 +98,9 @@ input[type="text"] {
 
 img {
   width: 100%; }
+
+.car_icon {
+  filter: invert(1); }
 
 li > div > img {
   width: 300px; }

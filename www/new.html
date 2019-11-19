@@ -6,10 +6,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151338060-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'UA-151338060-1', {'custom_map': {'dimension1': 'clientId'}});
+    gtag('config', 'UA-151338060-1', { 'custom_map': { 'dimension1': 'clientId' } });
 
   </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -135,7 +135,7 @@
               <label for="brand">Brand</label>
               <select class="custom-select" id="brand"></select>
             </div>
-            <img src="./src/assets/car.png" alt="Car view from top" />
+            <img class="car_icon" src="./src/assets/car.png" alt="Car view from top" />
             <button onclick="send()" type="submit" class="btn btn-outline-success">Search</button>
             <h3 id="response"></h3>
           </div>

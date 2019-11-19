@@ -3,12 +3,22 @@ window.onload = function() {
 };
 
 function init() {
-  var data = JSON.parse(`{"transmission": ["Ручная / Механика", "Автомат", "Типтроник", "Адаптивная", "Вариатор"], 
-      "color": ["Красный", "Черный", "Белый", "Синий", "Бежевый", "Серый", "Коричневый", "Фиолетовый", "Зеленый", "Желтый", "Оранжевый"]}`);
-
+  var data = JSON.parse(
+    `{"transmission": ["Ручная / Механика", "Автомат", "Типтроник", "Адаптивная", "Вариатор"],"color": ["Красный", "Черный", "Белый", "Синий", "Бежевый", "Серый", "Коричневый", "Фиолетовый", "Зеленый", "Желтый", "Оранжевый"], "fuel_type": ["Газ/бензин", "Дизель", "Бензин", "Газ", "Электро", "Газ метан", "Гибрид", "Другое", "Газ пропан-бутан"]}`
+  );
+  // const data = JSON
   Object.keys(data).forEach(value => {
     insertOptions(value, data[value]);
   });
+  const options_url = "http://34.90.123.230:8081/app/v1/data";
+  fetch(options_url)
+    .then(raw => raw.json())
+    .then(res =>
+      Object.keys(res).forEach(value => {
+        insertOptions(value, data[value]);
+      })
+    )
+    .catch(console.error);
 }
 String.prototype.toUnicode = function() {
   var result = "";
@@ -58,28 +68,16 @@ async function send() {
     }
   }
 
-  // var filledParams = Object.keys(body).filter(val => body[val]);
-  // var params = filledParams.reduce(
-  //   (a, b) => (a += b + "=" + body[b] + "&"),
-  //   ""
-  // );
   console.log(body);
 
   var features = JSON.stringify(body);
-  // console.log(encodeURIComponent(JSON.stringify(body)));
-  // console.log(encodeURI(JSON.stringify(body)));
 
-  // params = params.slice(0, params.length - 1);
-  var url = `http://34.90.123.230:8081/app/v1/predict?model=lgbm&features=${features}`;
-  // if (params.length) {
-  //   url = url + "?" + params;
-  // }
+  const url = `http://34.90.123.230:8081/app/v1/predict?model=lgbm&features=${features}`;
+
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   const raw = await fetch(proxyurl + url);
   const res = await raw.json();
-  console.log(res);
   const price = res["predicted_price"][0];
-  console.log(price);
   document.getElementById("response").innerText = price.toFixed(2) + "$";
 }
 function insertOptions(selectId, optionsArray) {
@@ -97,7 +95,3 @@ function makeTags(optionsArray) {
     option => `<option value=${option}>${option}</option>`
   );
 }
-// {"body_type": 'Седан', "brand_name": 'Toyota', "color": "Серый",\
-//                "engine_volume": 2,"fuel_type": "Дизель",\
-//                "mileage_value": 30000, "model": "Camry","prod_date":2015,\
-//                "transmission":"Автомат","with_auction":0,"with_exchange":0}
