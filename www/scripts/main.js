@@ -10,34 +10,64 @@ function init() {
     insertOptions(value, data[value]);
   });
 }
+String.prototype.toUnicode = function() {
+  var result = "";
+  if (english.test(this)) return this.toString();
+  if (isnumber.test(this)) return parseInt(this);
+  for (var i = 0; i < this.length; i++) {
+    // Assumption: all characters are < 0xffff
+    result +=
+      "\\" + "u" + ("000" + this[i].charCodeAt(0).toString(16)).substr(-4);
+  }
+  return result;
+};
+var english = /^[A-Za-z]*$/;
+var isnumber = /^[0-9]*$/;
 
-function send() {
+async function send() {
   var body = {};
-  body["prod_date"] = document.getElementById("year").value || "2002";
-  body["country"] = document.getElementById("country").value;
-  body["body_type"] = document.getElementById("type").value || "Седан";
-  body["brand_name"] = document.getElementById("brand").value || "Toyota";
-  body["mileage_value"] = document.getElementById("mileage").value || 0;
-  body["color"] = document.getElementById("color").value || "Серый";
+  body["prod_date"] =
+    document.getElementById("year").value.toUnicode() || "2002".toUnicode();
+  body["country"] = document
+    .getElementById("country")
+    .value.toUnicode()
+    .toUnicode();
+  body["body_type"] =
+    document.getElementById("type").value.toUnicode() || "Седан".toUnicode();
+  body["brand_name"] =
+    document.getElementById("brand").value.toUnicode() || "Toyota".toUnicode();
+  body["mileage_value"] =
+    document.getElementById("mileage").value.toUnicode() || 0;
+  body["color"] =
+    document.getElementById("color").value.toUnicode() || "Серый".toUnicode();
   body["with_auction"] = 0;
   body["with_exchange"] = 0;
-  body["model"] = document.getElementById("model").value || "corolla";
-  body["engine_volume"] = document.getElementById("engine_volume").value || 2;
-  body["fuel_type"] = document.getElementById("fuel_type").value || "Дизель";
+  body["model"] =
+    document.getElementById("model").value.toUnicode() || "corolla".toUnicode();
+  body["engine_volume"] =
+    document.getElementById("engine_volume").value.toUnicode() || 2;
+  body["fuel_type"] =
+    document.getElementById("fuel_type").value.toUnicode() ||
+    "Дизель".toUnicode();
   body["transmission"] =
-    document.getElementById("transmission").value || "Автомат";
+    document.getElementById("transmission").value.toUnicode() ||
+    "Автомат".toUnicode();
   for (const key in body) {
     if (!body[key] && body[key] !== 0) {
       delete body[key];
     }
   }
+
   // var filledParams = Object.keys(body).filter(val => body[val]);
   // var params = filledParams.reduce(
   //   (a, b) => (a += b + "=" + body[b] + "&"),
   //   ""
   // );
+  console.log(body);
 
-  var features = encodeURI(JSON.stringify(body));
+  var features = JSON.stringify(body);
+  // console.log(encodeURIComponent(JSON.stringify(body)));
+  // console.log(encodeURI(JSON.stringify(body)));
 
   // params = params.slice(0, params.length - 1);
   var url = `http://34.90.123.230:8081/app/v1/predict?model=lgbm&features=${features}`;
@@ -45,16 +75,17 @@ function send() {
   //   url = url + "?" + params;
   // }
 
-  fetch(url, {
+  var raw = await fetch(url, {
     mode: "no-cors",
-    headers: { "Access-Control-Allow-Origin": "*" }
-  })
-    .then(res =>
-      res.hasOwnProperty("json()")
-        ? (document.getElementById("response").value = res.json())
-        : console.log(res)
-    )
-    .catch(err => console.log(err));
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json"
+    }
+  });
+  console.log(raw);
+
+  var res = raw.json();
+  document.getElementById("response").value = res;
 }
 function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
