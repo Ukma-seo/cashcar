@@ -74,18 +74,13 @@ async function send() {
   // if (params.length) {
   //   url = url + "?" + params;
   // }
-
-  var raw = await fetch(url, {
-    mode: "no-cors",
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json"
-    }
-  });
-  console.log(raw);
-
-  var res = raw.json();
-  document.getElementById("response").value = res;
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const raw = await fetch(proxyurl + url);
+  const res = await raw.json();
+  console.log(res);
+  const price = res["predicted_price"][0];
+  console.log(price);
+  document.getElementById("response").innerText = price.toFixed(2) + "$";
 }
 function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
