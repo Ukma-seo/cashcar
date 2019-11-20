@@ -113,6 +113,27 @@ img {
 .hacker {
   padding: 30px 20%; }
 
+#autocomplete {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 193px;
+  display: none;
+  top: 50px;
+  border: 1px solid #fff; }
+  #autocomplete ul {
+    display: block;
+    padding: 15px; }
+    #autocomplete ul li {
+      display: inline-block;
+      list-style-type: none;
+      border-bottom: 1px solid white;
+      margin: 5px 0; }
+      #autocomplete ul li a {
+        color: white;
+        font-size: 0.8em; }
+
 .densitymetr {
   opacity: 0.8; }
 
