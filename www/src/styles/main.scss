@@ -10,6 +10,7 @@ body {
   // background: radial-gradient(transparent, #ccd 90%);
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url("./AI.jpg");
+  background-attachment: fixed;
 }
 
 .label__input {

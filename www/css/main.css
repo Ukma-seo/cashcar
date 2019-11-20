@@ -81,7 +81,8 @@ footer {
 body {
   font-family: "Arial";
   color: white;
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("./AI.jpg"); }
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("./AI.jpg");
+  background-attachment: fixed; }
 
 .label__input {
   position: relative;
