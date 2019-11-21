@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Google Tag Manager -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151338060-1"></script>
   <script>
@@ -12,6 +13,7 @@
     gtag('config', 'UA-151338060-1', { 'custom_map': { 'dimension1': 'clientId' } });
 
   </script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -29,26 +31,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./css/main.css" />
-  <meta name="description" content="" />
-  <title>Оцiнити вартiсть новоï автiвки за ïï параметрами</title>
-        <!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '429452774409172');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=429452774409172&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
 
+  <meta name="description" content="" />
+  <title>Оцiнити вартiсть моєï автiвки за ïï параметрами</title>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '429452774409172');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=429452774409172&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -176,12 +180,12 @@
       <div class="car__details-linked">
         <div class="car__wrapper">
           <div class="car__details-car">
-            <div style="display: none;" id="mileage_div" class="label__input">
+            <div id="mileage_div" class="label__input">
               <div class="arrow"></div>
               <label for="mileage"><i class="fa fa-tachometer"></i> Mileage</label>
-              <select class="custom-select" id="mileage">
-                <option value="0"></option>
-              </select>
+              <input class="form-control" type="number" min="0" oninput="validity.valid||(value='');" id="mileage" />
+
+
             </div>
             <div id="fuel_type_div" class="label__input">
               <div class="arrow"></div>
@@ -218,26 +222,36 @@
     </div>
   </main>
   <footer>
-    <h1> Оцінка нового авто</h1>
-
+    <h1>Оцінка б/у авто</h1>
     <hr>
     <h2>Принцип роботи калькулятора</h2>
-    Ми обрахуваємо ціну вашого авто абсолютно автоматично. Це означає, що людина ніяким чином не може вплинути на
-    результат формування ціни. Було зібрано та проаналізовано десятки тисяч успішних угод на платформах продажу б/у
-    авто. А кінцеве рішення здійснюється завдяки передовим технологіям штучного інтелекту.
 
+    Ми обрахуваємо ціну вашого авто абсолютно автоматично.
+    Це означає, що людина ніяким чином не може вплинути на результат формування ціни.
+    Було зібрано та проаналізовано десятки тисяч успішних угод на платформах продажу б/у авто.
+    А кінцеве рішення здійснюється завдяки передовим технологіям штучного інтелекту.
     <hr>
     <h2>Переваги автоматизованого оцінювання</h2>
 
     Для отримання оптимальної оцінки зазвичай потрібно аналізувати ринок, шукати схожі авто на різних платформах.
     Використовуючи наш калькулятор, ви отримуєте актуальну оцінку вартості авто, аналізуючи дані багатьох оголошень,
     перевірених експертами. Також вам не потрібно залучати третіх осіб, відповідно витрачати на це час та гроші.
-
     <hr>
-    <h2>Перелік параметрів нового авто</h2>
+    <h2>Перелік параметрів б/у авто</h2>
 
-    З даним переліком можна ознайомитися на (лінк на Оцінка б/у авто).
-    При оцінці нового авто значення поля «пробіг» має бути нулем.
+    <ol class="list-group">
+      <li class="list-group-item"> Модель авто (Megane , Focus , Camry)</li>
+      <li class="list-group-item"> Пробіг (кількість кілометрів)</li>
+      <li class="list-group-item"> Бренд авто (Volkswagen, Renault, Mercedes-Benz)</li>
+      <li class="list-group-item"> Об'єм двигуна (кількість літрів)</li>
+      <li class="list-group-item"> Тип кузова (Седан, Универсал, Внедорожник)</li>
+      <li class="list-group-item"> Рік випуску</li>
+      <li class="list-group-item"> Колір </li>
+      <li class="list-group-item"> Тип палива (Дизель, Бензин , Газ)</li>
+      <li class="list-group-item"> Коробка передач (Ручная / Механика, Автомат)</li>
+    </ol>
+
+    Дані параметри впорядковані згідно з їх впливом на формування ціни. Від найбільшого до найменшого.
   </footer>
   <script src="./scripts/main.js"></script>
 </body>

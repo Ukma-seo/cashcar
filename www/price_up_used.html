@@ -2,22 +2,52 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WVQ45RW');</script>
-  <!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151338060-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-151338060-1', { 'custom_map': { 'dimension1': 'clientId' } });
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./css/main.css" />
   <meta name="description" content="" />
   <title>Як підвищити ціну свого б/у авто?</title>
+        <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '429452774409172');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=429452774409172&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 </head>
 
 <body>
@@ -26,14 +56,48 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <header>
-    <ul>
-      <li><a href="buying_in_web.html">Купiвля в iнтернетi</a></li>
-      <li><a href="/">Б/У</a></li>
-      <li><a href="new.html">Новi</a></li>
-      <li><a href="prepare_to_sell.html">Пiдготовка до продажу</a></li>
-      <li><a href="buying_used.html">Купiвля Б/У авто</a></li>
-      <li><a href="price_up_used.html">Пiдвищити цiну свого авто</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">CashCar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active"><a class="nav-link" href="/">Б/У</a></li>
+          <li class="nav-item active"><a class="nav-link" href="new.html">Новi</a></li>
+
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Зробити продаж вдалим
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="price_up_used.html">Пiдвищити цiну свого авто</a>
+              <a class="dropdown-item" href="prepare_to_sell.html">Пiдготовка до продажу</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Зробити купiвлю вдалою
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="buying_in_web.html">Купiвля в iнтернетi</a>
+              <a class="dropdown-item" href="buying_used.html">Купiвля Б/У авто</a>
+            </div>
+          </li>
+
+        </ul>
+        <form id="search_form" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" id="input_field" type="search" placeholder="Пошук" aria-label="Search">
+          <div id="autocomplete"></div>
+          <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit">Пошук</button>
+        </form>
+      </div>
+    </nav>
   </header>
   <main>
     <h1>Як підвищити ціну свого б/у авто?</h1>
@@ -43,25 +107,30 @@
     авто.
 
     Для підвищення ціни б/у авто потрібно загалом є наступні поради:
+    <br>
+    <br>
     <ul>
-      <li>Гарний зовнішній вид. Тріснуте скло замінюємо на дешеве, китайського виробництва, тріснутий або розколотий
+      <li class="list-group-item"> <img class="cleaning_car" src="./src/assets/Picture1.png" alt="Cleaning Renault car">
+        Гарний зовнішній вид. Тріснуте скло замінюємо на дешеве, китайського виробництва,
+        тріснутий або розколотий
         пластик бамперів робимо в спеціалізованому автосервісі (найпопулярніші згідно шукачів -
         <a href="https://www.boschcarservice.com/ua/uk">boschcarservice</a> <a
           href="https://auto-spec.in.ua/">auto-spec</a> ). Після цього їдемо на полірування кузова.
         Можна, звичайно, і самому постаратися, але без практики результат може розчарувати. І не забуваємо про диски!
         Побиті і обгризені корозією, вони будуть псувати весь вигляд. Тому має сенс відправити їх на шліфування і
         фарбування. Сумарні витрати на такі роботи навряд чи заберуть кілька сотень $, проте допоможуть потім виручити
-        до тисячі зайвих $. Також рекомендується провести хімчистку салону та багажнику. <img
-          src="./src/assets/Picture1.png" alt="Cleaning Renault car">
+        до тисячі зайвих $. Також рекомендується провести хімчистку салону та багажнику.
       </li>
-      <li>Немає сенсу намагатися змінити цифру на одометрі, адже покупець з легкістю може звернутися до офіційного
+      <li class="list-group-item">Немає сенсу намагатися змінити цифру на одометрі, адже покупець з легкістю може
+        звернутися до офіційного
         СТО. </li>
 
     </ul>
-    Головні фактори вартості бу авто які було отримано аналізуючи дані з ресурсу <a
-      href="https://auto.ria.com">autoria</a>:
+    <br><br>
+    <h3>Головні фактори вартості бу авто які було отримано аналізуючи дані з ресурсу <a
+        href="https://auto.ria.com">autoria</a>:</h3>
 
-    <img src="./src/assets/Picture2.png" alt="Important car criteria for selling a car">
+    <img class="important_car_criteria" src="./src/assets/Picture2.png" alt="Important car criteria for selling a car">
 
 
     На запитання «чи є сенс робити ремонт авто перед його продажем?» можна відповісти досить простою формулою:

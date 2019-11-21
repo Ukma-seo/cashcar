@@ -2,22 +2,50 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WVQ45RW');</script>
-  <!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151338060-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-151338060-1', { 'custom_map': { 'dimension1': 'clientId' } });
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./css/main.css" />
   <meta name="description" content="" />
   <title>На що звернути увагу при купiвлi Б/У авто?</title>
+        <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '429452774409172');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=429452774409172&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -26,26 +54,63 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <header>
-    <ul>
-      <li><a href="buying_in_web.html">Купiвля в iнтернетi</a></li>
-      <li><a href="/">Б/У</a></li>
-      <li><a href="new.html">Новi</a></li>
-      <li><a href="prepare_to_sell.html">Пiдготовка до продажу</a></li>
-      <li><a href="buying_used.html">Купiвля Б/У авто</a></li>
-      <li><a href="price_up_used.html">Пiдвищити цiну свого авто</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">CashCar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active"><a class="nav-link" href="/">Б/У</a></li>
+          <li class="nav-item active"><a class="nav-link" href="new.html">Новi</a></li>
+
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Зробити продаж вдалим
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="price_up_used.html">Пiдвищити цiну свого авто</a>
+              <a class="dropdown-item" href="prepare_to_sell.html">Пiдготовка до продажу</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Зробити купiвлю вдалою
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="buying_in_web.html">Купiвля в iнтернетi</a>
+              <a class="dropdown-item" href="buying_used.html">Купiвля Б/У авто</a>
+            </div>
+          </li>
+
+        </ul>
+        <form id="search_form" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" id="input_field" type="search" placeholder="Пошук" aria-label="Search">
+          <div id="autocomplete"></div>
+          <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit">Пошук</button>
+        </form>
+      </div>
+    </nav>
   </header>
   <main>
     <h1>Купiвля Б/У авто</h1>
+    <br>
     При купівлі нової автівки, вибір найчастіше зупиняється на авто, котрі вже буди у використранні, особливо, якщо ця
     автівка у вас перша. З кожним наступним власником авто виникають нові нюанси, котрі потрібно вразовувати під час
     купівлі:
+    <br>
+    <br>
     <ul>
-      <li> Рівень пошкодженості</li>
-      <li> Чи була втоплена</li>
-      <li> Чи була бита</li>
-      <li> Кілометраж</li>
-      <li> Законність</li>
+      <li class="list-group-item"> Рівень пошкодженості</li>
+      <li class="list-group-item"> Чи була втоплена</li>
+      <li class="list-group-item"> Чи була бита</li>
+      <li class="list-group-item"> Кілометраж</li>
+      <li class="list-group-item"> Законність</li>
 
     </ul>
     <h2>Пошкодженість</h2>
@@ -53,29 +118,36 @@
     Були то звичайні подряпини, або повномаштабне зіткнення, що призвело до повної заміни деяких частин автівки може
     вплинути на її працездатність та зовнішній вигляд з часом. Тому потрібно ретельно перевіряти авто під час огляду.
     Наші поради:
+    <br>
+    <br>
     <ol>
-      <li> Придбайте, або орендуйте товщиномер перед оглядом авто.
+      <li class="list-group-item"> Придбайте, або орендуйте товщиномер перед оглядом авто.
       </li>
-      <li> Зверніться до експерта
+      <li class="list-group-item"> Зверніться до експерта
       </li>
-      <li> Звертайте увагу на фарбу та її відтінки на гайках, це може показати, чи рідна деталь, чи ні.
+      <li class="list-group-item"> Звертайте увагу на фарбу та її відтінки на гайках, це може показати, чи рідна деталь,
+        чи ні.
       </li>
-      <li> Рік випуску деталей має бути однаковим
+      <li class="list-group-item"> Рік випуску деталей має бути однаковим
       </li>
-      <li> Звертайте увагу на рекцію власника під час відповіді на питання про биття.
+      <li class="list-group-item"> Звертайте увагу на рекцію власника під час відповіді на питання про биття.
       </li>
     </ol>
-    <img src="./src/assets/densitymetr.jpg" alt="Device to measure dencity of car details">
-    <img src="./src/assets/bolt.jpg" alt="Check whether your car was hit.">
+    <div class="bolt_container">
+      <img class="densitymetr" src="./src/assets/densitymetr.jpg" alt="Device to measure dencity of car details">
+      <img class="bolt" src="./src/assets/bolt.jpg" alt="Check whether your car was hit.">
+    </div>
     <h2>Ризики ламаної машини</h2>
     В ідеалі не купляти ламану машину, але ви можете значно заощадити на купівлі такої машини, а отже цим фактором часто
     незтують. Але це може призвести до наступних проблем:
+    <br>
+    <br>
     <ol>
-      <li> Поява тріщин на вікнах, через викривлену геометрію деталей навколо них
+      <li class="list-group-item"> Поява тріщин на вікнах, через викривлену геометрію деталей навколо них
       </li>
-      <li> Неоднаковий знос на шинах з різних боків
+      <li class="list-group-item"> Неоднаковий знос на шинах з різних боків
       </li>
-      <li> Витік повітря з салону або в салон
+      <li class="list-group-item"> Витік повітря з салону або в салон
       </li>
     </ol>
     <h2>До кого звертатися по допомогу?</h2>
@@ -83,10 +155,12 @@
     купівлі в невідомих людей вона того варта, і збереже вам не лише гроші, а й нерви та вбереже вас від потенційних
     небезпечних ситуацій на дорозі.
 
+    <br>
+    <br>
     <ol>
-      <li> <a href="https://nise.com.ua/otsinka-avto">nise.com.ua</a></li>
-      <li> <a href="https://avtocod.ru/vyezdnaya-proverka">avtocod</a></li>
-      <li><a href="https://avtoexpertiza.cleverexpert.com.ua">avtoexpertiza</a></li>
+      <li class="list-group-item"> <a href="https://nise.com.ua/otsinka-avto">nise.com.ua</a></li>
+      <li class="list-group-item"> <a href="https://avtocod.ru/vyezdnaya-proverka">avtocod</a></li>
+      <li class="list-group-item"><a href="https://avtoexpertiza.cleverexpert.com.ua">avtoexpertiza</a></li>
     </ol>
 
     <h2>Отже</h2>

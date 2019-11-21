@@ -2,10 +2,15 @@
 @import "mixins";
 @import "car";
 @import "header";
+@import "footer";
 
 body {
   font-family: "Arial";
-  background: radial-gradient(transparent, #ccd 90%);
+  color: white;
+  // background: radial-gradient(transparent, #ccd 90%);
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    url("./AI.jpg");
+  background-attachment: fixed;
 }
 
 .label__input {
@@ -17,4 +22,83 @@ input[type="text"] {
   height: 25px;
   margin: 20px 0 0 0;
   padding: 0 10px;
+}
+img {
+  width: 100%;
+}
+.car_icon {
+  filter: invert(1);
+}
+.list-group-item {
+  background: rgba($color: #000000, $alpha: 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  overflow: hidden;
+}
+.important_car_criteria,
+.car_wash,
+.car_repair,
+.hacker {
+  padding: 30px 20%;
+}
+
+#autocomplete {
+  position: absolute;
+  background: rgba($color: #000000, $alpha: 0.9);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 193px;
+  display: none;
+  top: 50px;
+  border: 1px solid #fff;
+  ul {
+    display: block;
+    padding: 15px;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      border-bottom: 1px solid white;
+      margin: 5px 0;
+      a {
+        color: white;
+
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+.densitymetr {
+  opacity: 0.8;
+}
+.bolt_container {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+  img {
+    width: 40%;
+  }
+}
+.cleaning_car,
+.rik,
+.rst {
+  float: left;
+  margin: 10px;
+}
+li > div > img {
+  width: 300px;
+}
+li > img {
+  width: 300px;
+}
+main {
+  width: 90%;
+  margin: 50px auto;
+}
+.constructor {
+  margin: 0 auto;
+}
+#brand_div {
+  width: 100px;
 }

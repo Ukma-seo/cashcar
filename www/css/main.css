@@ -4,7 +4,7 @@
 
 .car__details .car__details-linked {
   position: relative;
-  margin: 100px auto; }
+  margin: 20px auto; }
   .car__details .car__details-linked .label__input {
     position: absolute; }
   .car__details .car__details-linked #mileage_div {
@@ -12,7 +12,17 @@
     top: 400px; }
     .car__details .car__details-linked #mileage_div .arrow {
       width: 100px;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid white;
+      position: absolute;
+      transform: rotate(45deg);
+      top: -20px;
+      left: -100px; }
+  .car__details .car__details-linked #transmission_div {
+    left: 330px;
+    top: 150px; }
+    .car__details .car__details-linked #transmission_div .arrow {
+      width: 100px;
+      border-bottom: 2px solid white;
       position: absolute;
       transform: rotate(45deg);
       top: -20px;
@@ -22,7 +32,17 @@
     top: 100px; }
     .car__details .car__details-linked #brand_div .arrow {
       width: 100px;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid white;
+      position: absolute;
+      transform: rotate(-45deg);
+      top: -20px;
+      left: 100%; }
+  .car__details .car__details-linked #fuel_type_div {
+    right: 330px;
+    top: 310px; }
+    .car__details .car__details-linked #fuel_type_div .arrow {
+      width: 100px;
+      border-bottom: 2px solid white;
       position: absolute;
       transform: rotate(-45deg);
       top: -20px;
@@ -36,13 +56,16 @@
     display: flex;
     flex-direction: column; }
     .car__details .car__wrapper .car__details-car button {
-      margin: 100px 0;
+      margin: 20px 0;
+      padding: 10px;
       width: 100%; }
 
 header {
   height: 50px;
   width: 100%;
   background: #bbc; }
+  header nav {
+    z-index: 1; }
   header ul {
     list-style: none;
     display: flex;
@@ -50,15 +73,24 @@ header {
     height: 100%;
     align-items: center; }
 
+footer {
+  margin: auto;
+  width: 90%;
+  margin-bottom: 100px; }
+
 body {
   font-family: "Arial";
-  background: radial-gradient(transparent, #ccd 90%); }
+  color: white;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("./AI.jpg");
+  background-attachment: fixed; }
 
 .label__input {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 30px 0; }
+  .label__input label {
+    white-space: nowrap; }
 
 input[type="text"] {
   border-radius: 10px;
@@ -66,3 +98,74 @@ input[type="text"] {
   height: 25px;
   margin: 20px 0 0 0;
   padding: 0 10px; }
+
+img {
+  width: 100%; }
+
+.car_icon {
+  filter: invert(1); }
+
+.list-group-item {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden; }
+
+.important_car_criteria,
+.car_wash,
+.car_repair,
+.hacker {
+  padding: 30px 20%; }
+
+#autocomplete {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 193px;
+  display: none;
+  top: 50px;
+  border: 1px solid #fff; }
+  #autocomplete ul {
+    display: block;
+    padding: 15px; }
+    #autocomplete ul li {
+      display: inline-block;
+      list-style-type: none;
+      border-bottom: 1px solid white;
+      margin: 5px 0; }
+      #autocomplete ul li a {
+        color: white;
+        font-size: 0.8em; }
+
+.densitymetr {
+  opacity: 0.8; }
+
+.bolt_container {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly; }
+  .bolt_container img {
+    width: 40%; }
+
+.cleaning_car,
+.rik,
+.rst {
+  float: left;
+  margin: 10px; }
+
+li > div > img {
+  width: 300px; }
+
+li > img {
+  width: 300px; }
+
+main {
+  width: 90%;
+  margin: 50px auto; }
+
+.constructor {
+  margin: 0 auto; }
+
+#brand_div {
+  width: 100px; }
