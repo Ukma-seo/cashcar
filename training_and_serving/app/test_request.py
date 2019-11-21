@@ -10,12 +10,12 @@ def preprocess_output(string):
 def main():
     cars_params = {
         "body_type": 'Седан',
-        "brand_name": 'Toyota',
+        "brand_name": 'Mercedes-Benz',
         "color": "Серый",
         "engine_volume": 2,
         "fuel_type": "Дизель",
-        "mileage_value": 30000,
-        "model": "Camry",
+        "mileage_value": 10000,
+        "model": "",
         "prod_date":2019,
         "transmission":"Автомат",
         "with_auction":0,

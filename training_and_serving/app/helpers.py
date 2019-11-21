@@ -84,3 +84,7 @@ def predict(model, features_dict):
         preds = model.predict(data_prepared).tolist()
 
     return preds
+
+def load_unique_values(abs_file_path):
+    file_path = Path(abs_file_path)
+    return json.loads(file_path.read_text().replace ("'", '"' ))
