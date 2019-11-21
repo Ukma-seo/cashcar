@@ -51,6 +51,7 @@ String.prototype.toUnicode = function() {
   var result = "";
   if (english.test(this)) return this.toString();
   if (isnumber.test(this)) return parseInt(this);
+  if (!isNaN(parseFloat(this))) return parseFloat(this);
   for (var i = 0; i < this.length; i++) {
     // Assumption: all characters are < 0xffff
     result +=
@@ -106,7 +107,12 @@ async function send() {
   const res = await raw.json();
   const price = res["predicted_price"][0];
   document.getElementById("response").innerText = price.toFixed(2) + "$";
+  window.scrollTo({
+    top: 100,
+    behavior: "smooth"
+  });
 }
+
 function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
   if (selectTag) {

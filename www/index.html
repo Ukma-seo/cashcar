@@ -91,6 +91,27 @@
         <div class="label__input">
           <label for="year"><i class="fa fa-calendar"></i> Year</label>
           <select class="custom-select" name="year" id="year">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
           </select>
         </div>
         <div class="label__input">
@@ -107,7 +128,13 @@
         </div>
         <div class="label__input">
           <label for="engine_volume"><i class="fa fa-cog"></i> Engine volume </label>
-          <select class="custom-select" name="" id="engine_volume"></select>
+          <select class="custom-select" name="" id="engine_volume">
+            <option value="3.0">3.0</option>
+            <option value="3.5">3.5</option>
+            <option value="4.0">4.0</option>
+            <option value="4.5">4.5</option>
+            <option value="5.0">5.0</option>
+          </select>
         </div>
         <div class="label__input">
           <label for="model"><i class="fa fa-car"></i> Model</label>
@@ -115,7 +142,6 @@
         </div>
 
       </div>
-      <hr />
 
       <div class="car__details-linked">
         <div class="car__wrapper">
@@ -123,7 +149,14 @@
             <div id="mileage_div" class="label__input">
               <div class="arrow"></div>
               <label for="mileage"><i class="fa fa-tachometer"></i> Mileage</label>
-              <select class="custom-select" id="mileage"></select>
+              <select class="custom-select" id="mileage">
+                <option value="10000">10000</option>
+                <option value="50000">50000</option>
+                <option value="70000">70000</option>
+                <option value="80000">80000</option>
+                <option value="100000">100000</option>
+
+              </select>
             </div>
             <div id="fuel_type_div" class="label__input">
               <div class="arrow"></div>
@@ -138,10 +171,21 @@
             <div id="brand_div" class="label__input">
               <div class="arrow"></div>
               <label for="brand"><i class="fa fa-copyright"></i> Brand</label>
-              <select class="custom-select" id="brand"></select>
+              <select class="custom-select" id="brand">
+                <option value="Tesla">Tesla</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Honda">Honda</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="BMW">BMW</option>
+                <option value="Range Rover">Range Rover</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Audi">Audi</option>
+                <option value="Lexus">Lexus</option>
+              </select>
             </div>
             <img class="car_icon" src="./src/assets/car.png" alt="Car view from top" />
-            <button onclick="send()" type="submit" class="btn btn-outline-success">Search</button>
+            <button onclick="send()" type="submit" class="btn btn-outline-success">Порахувати</button>
             <h3 id="response"></h3>
           </div>
         </div>

@@ -23,6 +23,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8" />
   <link rel="canonical" href="http://cashcar.com.ua/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,59 +86,102 @@
     <div class="car__details">
       <div class="car__details-unlinked">
         <div class="label__input">
-          <label for="year">Year</label>
+          <label for="year"><i class="fa fa-calendar"></i> Year</label>
           <select class="custom-select" name="year" id="year">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
           </select>
         </div>
         <div class="label__input">
-          <label for="country">Country</label>
+          <label for="country"><i class="fa fa-map-pin"></i> Country</label>
           <select class="custom-select" name="country" id="country"></select>
         </div>
         <div class="label__input">
-          <label for="type">Type</label>
+          <label for="type"><i class="fa fa-car"></i> Type</label>
           <select class="custom-select" name="type" id="type"></select>
         </div>
         <div class="label__input">
-          <label for="color">Color</label>
+          <label for="color"><i class="fa fa-paint-brush"></i> Color</label>
           <select class="custom-select" name="" id="color"></select>
         </div>
         <div class="label__input">
-          <label for="engine_volume">Engine volume</label>
-          <select class="custom-select" name="" id="engine_volume"></select>
+          <label for="engine_volume"><i class="fa fa-cog"></i> Engine volume </label>
+          <select class="custom-select" name="" id="engine_volume">
+            <option value="3.0">3.0</option>
+            <option value="3.5">3.5</option>
+            <option value="4.0">4.0</option>
+            <option value="4.5">4.5</option>
+            <option value="5.0">5.0</option>
+          </select>
         </div>
         <div class="label__input">
-          <label for="model">Model</label>
+          <label for="model"><i class="fa fa-car"></i> Model</label>
           <select class="custom-select" name="" id="model"></select>
         </div>
 
       </div>
-      <hr />
 
       <div class="car__details-linked">
         <div class="car__wrapper">
           <div class="car__details-car">
             <div id="mileage_div" class="label__input">
               <div class="arrow"></div>
-              <label for="mileage">Mileage</label>
-              <select class="custom-select" id="mileage"></select>
+              <label for="mileage"><i class="fa fa-tachometer"></i> Mileage</label>
+              <select class="custom-select" id="mileage">
+                <option value="10000">10000</option>
+                <option value="50000">50000</option>
+                <option value="70000">70000</option>
+                <option value="80000">80000</option>
+                <option value="100000">100000</option>
+              </select>
             </div>
             <div id="fuel_type_div" class="label__input">
               <div class="arrow"></div>
-              <label for="fuel_type">Fuel Type</label>
+              <label for="fuel_type"><i class="fa fa-tint"></i> Fuel Type</label>
               <select class="custom-select" id="fuel_type"></select>
             </div>
             <div id="transmission_div" class="label__input">
               <div class="arrow"></div>
-              <label for="transmission">Transmission</label>
+              <label for="transmission"><i class="fa fa-cog"></i> Transmission</label>
               <select class="custom-select" id="transmission"></select>
             </div>
             <div id="brand_div" class="label__input">
               <div class="arrow"></div>
-              <label for="brand">Brand</label>
-              <select class="custom-select" id="brand"></select>
+              <label for="brand"><i class="fa fa-copyright"></i> Brand</label>
+              <select class="custom-select" id="brand">
+                <option value="Tesla">Tesla</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Honda">Honda</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="BMW">BMW</option>
+                <option value="Range Rover">Range Rover</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Audi">Audi</option>
+                <option value="Lexus">Lexus</option>
+              </select>
             </div>
             <img class="car_icon" src="./src/assets/car.png" alt="Car view from top" />
-            <button onclick="send()" type="submit" class="btn btn-outline-success">Search</button>
+            <button onclick="send()" type="submit" class="btn btn-outline-success">Порахувати</button>
             <h3 id="response"></h3>
           </div>
         </div>

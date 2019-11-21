@@ -89,6 +89,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 30px 0; }
+  .label__input label {
+    white-space: nowrap; }
 
 input[type="text"] {
   border-radius: 10px;
