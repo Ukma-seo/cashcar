@@ -40,7 +40,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">CashCar</a>
+      <a class="navbar-brand" href="/">CashCar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -117,7 +117,22 @@
         </div>
         <div class="label__input">
           <label for="type"><i class="fa fa-car"></i> Type</label>
-          <select class="custom-select" name="type" id="type"></select>
+          <select class="custom-select" name="type" id="type">
+            <option value="Хэтчбек">Хэтчбек </option>
+            <option value="Внедорожник / Кроссовер">Внедорожник / Кроссовер </option>
+            <option value="Универсал">Универсал </option>
+            <option value="Самосвал">Самосвал </option>
+            <option value="Седан">Седан </option>
+            <option value="Тентованый">Тентованый </option>
+            <option value="Легковой фургон (до 1,5 т)"> Легковой фургон (до 1,5 т)</option>
+            <option value="Купе">Купе </option>
+            <option value="Платформа">Платформа </option>
+            <option value="Минивэн">Минивэн </option>
+            <option value="Фургон">Фургон </option>
+            <option value="Бортовой полуприцеп">Бортовой полуприцеп </option>
+            <option value="Кабриолет"> Кабриолет</option>
+
+          </select>
         </div>
         <div class="label__input">
           <label for="color"><i class="fa fa-paint-brush"></i> Color</label>
@@ -143,15 +158,11 @@
       <div class="car__details-linked">
         <div class="car__wrapper">
           <div class="car__details-car">
-            <div id="mileage_div" class="label__input">
+            <div style="display: none;" id="mileage_div" class="label__input">
               <div class="arrow"></div>
               <label for="mileage"><i class="fa fa-tachometer"></i> Mileage</label>
               <select class="custom-select" id="mileage">
-                <option value="10000">10000</option>
-                <option value="50000">50000</option>
-                <option value="70000">70000</option>
-                <option value="80000">80000</option>
-                <option value="100000">100000</option>
+                <option value="0"></option>
               </select>
             </div>
             <div id="fuel_type_div" class="label__input">
