@@ -24,14 +24,16 @@ function init() {
     insertOptions(value, data[value]);
   });
   const options_url = "http://34.90.123.230:8081/app/v1/data";
-  fetch(options_url)
-    .then(raw => raw.json())
-    .then(res =>
-      Object.keys(res).forEach(value => {
-        insertOptions(value, data[value]);
-      })
-    )
-    .catch(console.error);
+  // fetch(no_cors(options_url))
+  //   .then(raw => raw.json())
+  //   .then(res =>
+  //     Object.keys(res).forEach(value => {
+  //       console.log(value, res[value]);
+
+  //       insertOptions(value, res[value]);
+  //     })
+  //   )
+  //   .catch(console.error);
 }
 document
   .getElementById("search_form")
@@ -45,6 +47,11 @@ function handle_autocomplete() {
   const input = document.getElementById("input_field").value;
   const fitting_pages = search_for_words(input, pages);
   append_autocomplete(fitting_pages);
+}
+
+function no_cors(url) {
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  return proxyurl + url;
 }
 
 String.prototype.toUnicode = function() {
@@ -101,9 +108,7 @@ async function send() {
   var features = JSON.stringify(body);
 
   const url = `http://34.90.123.230:8081/app/v1/predict?model=lgbm&features=${features}`;
-
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const raw = await fetch(proxyurl + url);
+  const raw = await fetch(no_cors(url));
   const res = await raw.json();
   const price = res["predicted_price"][0];
   document.getElementById("response").innerText = price.toFixed(2) + "$";
