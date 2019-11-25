@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = function() {
   init();
 };
@@ -3114,7 +3116,8 @@ function init() {
   insertOptions("year", year_options_array);
 }
 function handle_select_model(event) {
-  insertOptions("model", data["brand_model_combinations"][event.target.value]);
+  var val = event.target.value.toString().replace("_", " ");
+  insertOptions("model", data["brand_model_combinations"][val]);
 }
 
 document
@@ -3243,6 +3246,7 @@ function append_autocomplete(fitting_pages) {
 
 function makeTags(optionsArray) {
   return optionsArray.map(
-    option => `<option value=${option.replace(" ", "_")}>${option}</option>`
+    option =>
+      `<option value=${option.toString().replace(" ", "_")}>${option}</option>`
   );
 }
