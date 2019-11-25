@@ -3107,7 +3107,8 @@ function init() {
 
     insertOptions(currKey, data[currKey]);
   }
-  var chosen_brand = document.getElementById("brand_name").value || "Tesla";
+  var chosen_brand =
+    document.getElementById("brand_name").value.replace("_", " ") || "Tesla";
   insertOptions("model", data["brand_model_combinations"][chosen_brand]);
   var year_options_array = [];
   for (let i = 1900; i < 2020; i++) {
@@ -3210,6 +3211,7 @@ function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
   selectTag.innerHTML = "";
   if (selectTag) {
+    optionsArray.sort();
     var optionTags = makeTags(optionsArray);
     optionTags.forEach(tag => {
       selectTag.innerHTML += tag;
