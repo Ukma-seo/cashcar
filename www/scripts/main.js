@@ -3211,7 +3211,7 @@ function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
   selectTag.innerHTML = "";
   if (selectTag) {
-    optionsArray.sort();
+    // optionsArray.sort();
     var optionTags = makeTags(optionsArray);
     optionTags.forEach(tag => {
       selectTag.innerHTML += tag;
