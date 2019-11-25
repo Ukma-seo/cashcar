@@ -3164,9 +3164,11 @@ async function send() {
     document.getElementById("year").value.toUnicode() || "2002".toUnicode();
 
   body["body_type"] =
-    document.getElementById("type").value.toUnicode() || "Седан".toUnicode();
+    document.getElementById("body_type").value.toUnicode() ||
+    "Седан".toUnicode();
   body["brand_name"] =
-    document.getElementById("brand").value.toUnicode() || "Toyota".toUnicode();
+    document.getElementById("brand_name").value.toUnicode() ||
+    "Toyota".toUnicode();
   body["mileage_value"] =
     document.getElementById("mileage").value.toUnicode() || 0;
   body["color"] =
