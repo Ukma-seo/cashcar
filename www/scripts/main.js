@@ -3132,8 +3132,9 @@ const CONSTANTS = {
     "fuel_type",
     "transmission"
   ],
-  english: /^[A-Za-z]*$/,
-  isnumber: /^[0-9]*$/
+  english: /^[A-Za-z\s\-\_]*$/,
+  isnumber: /^[0-9]*$/,
+  hasSymbols: /^[\s\-\_]*$/
 };
 
 String.prototype.toUnicode = function() {
@@ -3227,7 +3228,6 @@ async function send() {
   console.log(body);
 
   var features = JSON.stringify(body);
-
   const url = `http://34.90.123.230:8081/app/v1/predict?model=lgbm&features=${features}`;
   const raw = await fetch(no_cors(url));
   const res = await raw.json();
@@ -3243,7 +3243,7 @@ function insertOptions(selectId, optionsArray) {
   var selectTag = document.getElementById(selectId);
   selectTag.innerHTML = "";
   if (selectTag) {
-    // optionsArray.sort();
+    optionsArray.sort();
     var optionTags = makeTags(optionsArray);
     optionTags.forEach(tag => {
       selectTag.innerHTML += tag;
